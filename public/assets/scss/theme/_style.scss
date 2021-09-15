@@ -7419,6 +7419,9 @@ footer {
 
   .mobile-search {
     display: none;
+    img {
+      display: none !important;
+    }
   }
 }
 

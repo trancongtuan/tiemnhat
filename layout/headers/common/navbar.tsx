@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { MENUITEMS } from '../../../constant/menu';
 import { Container, Row } from 'reactstrap';
-import { useTranslation } from 'react-i18next';
 import { useRouter } from 'next/router';
 
 const NavBar = () => {
@@ -130,7 +129,7 @@ const NavBar = () => {
                 <li key={i} className={` ${menuItem.megaMenu ? 'mega-menu' : ''}`}>
                   <a className="nav-link" onClick={e => openMblNav(e)}>
                     {' '}
-                    features
+                    {menuItem.title}
                     <span className="sub-arrow"></span>
                   </a>
                   {menuItem.children && !menuItem.megaMenu ? (

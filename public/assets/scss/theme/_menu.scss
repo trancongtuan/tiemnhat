@@ -2175,7 +2175,7 @@ header{
           }
           > div {
             img {
-              display: none;
+              display: none !important;
             }
           }
         }
@@ -2188,7 +2188,7 @@ header{
             color: $header-font;
           }
           img {
-            display: none;
+            display: none !important;
           }
           .show-div {
             .form-group {
