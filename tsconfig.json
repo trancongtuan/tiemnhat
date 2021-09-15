@@ -14,6 +14,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "helpers/Compare/CompareContext.tsx", "components/customizer/theme-settings.js", "components/common-layout.tsx", "headers/header-one.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "helpers/Compare/CompareContext.tsx", "components/customizer/theme-settings.js", "components/common-layout.tsx", "headers/header-one.js", "components/common/product-box/MasterProductDetail.js"],
   "exclude": ["node_modules"]
 }
