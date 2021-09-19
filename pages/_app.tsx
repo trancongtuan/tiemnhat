@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <QueryClientProvider client={queryClient}>
           <Head>
             <link rel="shortcut icon" href="/favicon.ico" />
-            <title>Tiem Nha T</title>
+            <title>Tiệm Nhà T</title>
           </Head>
           <Component {...pageProps} />
         </QueryClientProvider>
