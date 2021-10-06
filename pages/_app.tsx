@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { appWithTranslation } from 'next-i18next';
 import Head from 'next/head';
 import '../public/assets/scss/app.scss';
+import { AuthProvider } from '../queries/account';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -25,7 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     const path = window.location.pathname.split('/');
     const url = path[path.length - 1];
     setUrl(url);
-    document.body.classList.add('dark');
+    // document.body.classList.add('dark');
     setTimeout(function () {
       setIsLoading(false);
     }, 1000);
@@ -36,11 +37,13 @@ function MyApp({ Component, pageProps }: AppProps) {
         <div className="loader-wrapper">{url === 'Christmas' ? <div id="preloader"></div> : <div className="loader"></div>}</div>
       ) : (
         <QueryClientProvider client={queryClient}>
-          <Head>
-            <link rel="shortcut icon" href="/favicon.ico" />
-            <title>Tiệm Nhà T</title>
-          </Head>
-          <Component {...pageProps} />
+          <AuthProvider>
+            <Head>
+              <link rel="shortcut icon" href="/favicon.ico" />
+              <title>Tiệm Nhà T</title>
+            </Head>
+            <Component {...pageProps} />
+          </AuthProvider>
         </QueryClientProvider>
       )}
     </Fragment>

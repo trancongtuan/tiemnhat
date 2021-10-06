@@ -8,8 +8,10 @@ import cart from '../../public/assets/images/icon/cart.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useAuth } from '../../queries/account';
 
 const Headers = ({ headerClass, topClass }: { headerClass?: string; topClass: string }) => {
+  const { logout, profile } = useAuth();
   const router = useRouter();
   useEffect(() => {
     setTimeout(function () {
